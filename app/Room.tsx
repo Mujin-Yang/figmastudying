@@ -15,7 +15,7 @@ export function Room({ children }: { children: ReactNode }) {
           id="my-room"
           initialStorage={{canvasObjects: new LiveMap(),}}
           initialPresence={{
-          cursor:null, cursorColor:null, editingText:null
+          cursor:null, message:null
       }}>
         <ClientSideSuspense fallback={<Loader/>}>
           {children}
