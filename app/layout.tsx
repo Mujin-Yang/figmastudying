@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Work_Sans } from "next/font/google";
 import "./globals.css";
-import {Room} from "@/app/Room";
+import {Room} from "./Room";
 
 //调整字体
 const work_sans = Work_Sans({
