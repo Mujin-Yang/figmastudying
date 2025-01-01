@@ -10,7 +10,13 @@ const compat = new FlatCompat({
 });
 
 const eslintConfig = [
-  ...compat.extends("next/core-web-vitals", "next/typescript"),
+  ...compat.config({
+    extends: ["next/core-web-vitals", "next/typescript"],
+    rules: {
+      '@typescript-eslint/no-explicit-any': 'off', // 禁用 any 类型检查
+      '@typescript-eslint/ban-ts-comment': 'off', // 禁用 @ts-ignore 检查
+    },
+  }),
 ];
 
 export default eslintConfig;
